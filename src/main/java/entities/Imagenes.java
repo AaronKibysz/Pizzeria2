@@ -1,5 +1,14 @@
 package entities;
 
+
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+
+@Builder
 public class Imagenes {
 
     private Long id;

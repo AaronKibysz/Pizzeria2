@@ -1,7 +1,17 @@
 package entities;
 
-import java.time.LocalDate;
+import lombok.*;
 
+import java.time.LocalDate;
+import java.util.HashSet;
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@ToString(exclude = "hace")
+@Builder
 public class Cliente {
 
     private Long id;
@@ -10,5 +20,8 @@ public class Cliente {
     private String telefono;
     private String email;
     private LocalDate fechaNacimiento;
+
+    @Builder.Default
+    private HashSet<Pedido> hace = new HashSet<>();
 
 }

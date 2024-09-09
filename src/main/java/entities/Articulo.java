@@ -1,5 +1,14 @@
 package entities;
 
+
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+
+@Builder
 public class Articulo {
 
     private Long id;
@@ -10,7 +19,7 @@ public class Articulo {
     private Integer stockMaximo;
     private Integer tiempoEstimadoMinutos;
 
-    private UnidadMedida unidadMedida;
+    private UnidadMedida unidad;
     private Imagenes imagen;
 
 }
